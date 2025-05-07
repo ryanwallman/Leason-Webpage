@@ -1,0 +1,494 @@
+/* styles.css */
+
+/* Base and Typography */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: white;
+    color: #3a3a3a;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #5e2b5e;
+    margin-bottom: 0.5rem;
+}
+
+a {
+    color: #b03060;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to right, #ffb6c1, #dda0dd);
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+/* Social Media Buttons */
+.social-links {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 1rem;
+}
+
+.social-button {
+    background-color: #ffffff;
+    color: #5e2b5e;
+    border: 2px solid #ffb6c1;
+    border-radius: 50%;
+    width: 50px; /* Ensure width and height are the same */
+    height: 50px; /* Same as width to create a circle */
+    display: flex;
+    justify-content: center; /* Center the icon horizontally */
+    align-items: center; /* Center the icon vertically */
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.social-button:hover {
+    background-color: #ff69b4;
+    color: white;
+}
+
+.social-button i {
+    pointer-events: none; /* Prevents icon click */
+}
+
+
+/* Contact Button Styling */
+.social-button.contact {
+    background-color: white;
+    color: #5e2b5e;
+}
+
+.social-button.contact:hover {
+    background-color: #ff69b4;
+    color: white;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    color: #5e2b5e;
+}
+
+.modal-content label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.modal-content input,
+.modal-content textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.modal-content button[type="submit"] {
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.close {
+    position: absolute;
+    top: 10px; right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #999;
+}
+
+
+
+/* About Me Section */
+.about-me {
+    display: flex; /* Flexbox to align image and text horizontally */
+    align-items: center; /* Vertically center the content */
+    justify-content: space-between; /* Space out image and text */
+    padding: 2rem;
+}
+
+/* Image Styling */
+.about-image img {
+    width: 250px; /* Adjust this as needed */
+    height: 250px; /* Adjust this as needed */
+    border-radius: 50%; /* Make the image circular */
+    border: 5px solid white;
+    object-fit: cover; /* Ensures the image fits within the circle */
+    margin-right: 2rem; /* Adds some space between the image and the text */
+}
+
+/* Details Styling */
+.about-details {
+    max-width: 600px; /* Limit the width of the text section */
+    text-align: left;
+}
+
+.about-details h1 {
+    font-size: 2.5rem; /* Adjust size as needed */
+    color: #5e2b5e;
+    margin-bottom: -0.5rem;
+}
+
+.about-details p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+
+/* Section Styling */
+.section {
+    padding: 4rem 2rem;
+    background-color: #fbe4f2;
+    border-top: 2px solid #f0cce3;
+}
+
+.portfolio {
+    padding: 0rem 2rem;
+    background-color: white;
+    margin-top: -100px;
+    margin-left: 22%;
+    margin-right: 22%;
+    margin-bottom: 80px;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.search-bar {
+    flex-grow: 1; /* Make the search bar expand to fill available space */
+    padding: 0.75rem;
+    border-radius: 12px;
+    border: 0px;
+    font-size: 1rem;
+    margin-right: 1rem; /* Optional: Adds some space between the search bar and the filter buttons */
+    width: 30%;
+    background-color: #f4f4f4;
+}
+
+.filter-search {
+    display: flex; /* Use Flexbox to lay out items in a row */
+    justify-content: space-between; /* Distribute space evenly between the elements */
+    align-items: center; /* Vertically center the items */
+    gap: 1rem; /* Add some space between the input and buttons */
+    margin-bottom: 1.5rem; /* Optional: Adds some spacing below the filter/search bar */
+}
+
+.filters {
+    display: flex; 
+}
+
+
+
+.type-filter,
+.source-filter {
+    padding: 0.75rem;
+    border-radius: 12px;
+    border: 2px solid #ffb6c1;
+    font-size: 1rem;
+    background-color: #ffffff;
+    color: #5e2b5e;
+    margin: 15px;
+}
+
+/* Portfolio Grid */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 column */
+    gap: 2rem; /* Adds space between the cards */
+    padding: 1rem; /* Optional: Adds padding around the grid */
+}
+
+/* Card Component */
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* Card Layout */
+.card {
+    display: grid; /* Use grid layout inside each card */
+    grid-template-columns: 1fr 1fr; /* Two columns: one for the details, one for the image */
+    gap: 1rem; /* Adds space between the content and the image */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    padding: 10px;
+    height: auto; /* Ensure the height of the card adjusts dynamically */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Adds a hover effect */
+}
+
+.card .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space the elements inside the details container */
+    padding: 0.5rem; /* Adds padding to the text */
+    overflow: hidden; /* Prevents text from overflowing */
+    max-width: 60%;
+    
+}
+
+.card .details span {
+    font-size: 0.9rem;
+    color: #888;
+    
+}
+
+.card .details h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin: 1rem 0;
+}
+
+.card .details p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Image section */
+.card img {
+    width: 100%; /* Ensure the image takes up the full width of the image column */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensures the image fits without distorting */
+    border-radius: 8px;
+    max-width: 100%; /* Prevent image overflow */
+}
+
+/* Ensuring image container keeps layout intact */
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+.image-container img {
+    width: 100%; /* The image fills its container without stretching the card */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure the image doesn't overflow */
+    border-radius: 8px;
+}
+
+.card-link:hover {
+    text-decoration: none;
+}
+
+/* Responsive Layout for smaller screens */
+@media (max-width: 768px) {
+    .card {
+        grid-template-columns: 1fr; 
+    }
+    
+    .image-container {
+        padding: 0.1rem;
+    }
+    
+    .card .details span {
+        font-size: 0.6rem;
+        color: #888;
+        
+    }
+    
+    .card .details h3 {
+        font-size: 1rem;
+        color: #333;
+        margin: 0.8rem 0;
+    }
+    
+    .card .details p {
+        font-size: 0.8rem;
+        color: #666;
+    }
+}
+
+form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input, textarea {
+    padding: 0.75rem;
+    border: 2px solid #ffb6c1;
+    border-radius: 10px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+button {
+    background-color: #da70d6;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+button:hover {
+    background-color: #c060c6;
+}
+
+/* Footer */
+footer {
+    background-color: #ffe4ec;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.875rem;
+    color: #8b008b;
+}
+
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+    /* Hero Section */
+    .hero {
+        height: 50vh;
+        padding: 1.5rem;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    /* Social Media Icons */
+    .social-links {
+        top: 20px;
+        right: 10px;
+        gap: 0.8rem;
+    }
+    
+    .social-button {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    
+    /* About Me Section */
+    .about-me {
+        padding: 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .about-image img {
+        width: 150px;
+        height: 150px;
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    
+    .about-details h1 {
+        font-size: 2rem;
+    }
+    
+    .about-details p {
+        font-size: 1rem;
+        text-align: center;
+    }
+    
+    /* Portfolio Section */
+    .portfolio {
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 50px;
+    }
+    
+    .search-bar {
+        width: 100%;
+        
+    }
+    
+    .filter-search {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .type-filter,
+    .source-filter {
+        margin: 10px 0;
+    }
+    
+    /* Grid Layout */
+    .grid {
+        grid-template-columns: 1fr; /* Single column layout for mobile */
+    }
+    
+    /* Card Layout */
+    .card {
+        grid-template-columns: 1fr; /* Stack the content and image in one column */
+    }
+    
+    .card .details {
+        max-width: 100%;
+    }
+}

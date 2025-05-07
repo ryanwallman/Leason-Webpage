@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>My Portfolio</title>
+	<link rel="stylesheet" href="styles.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Inter&family=Playfair+Display&display=swap" rel="stylesheet">
+	<!-- Add Font Awesome CDN for icons -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<header class="hero">
+		<div class="social-links">
+			<a href="https://www.linkedin.com/in/morgan-leason/" target="_blank" class="social-button linkedin">
+				<i class="fab fa-linkedin"></i>
+			</a>
+			<a href="https://instagram.com/yourprofile" target="_blank" class="social-button instagram">
+				<i class="fab fa-instagram"></i>
+			</a>
+			<a href="mailto:morgansleason@gmail.com" target="_blank" class="social-button email">
+				<i class="fas fa-envelope"></i>
+			</a>
+			<!-- Contact Me Button -->
+			<button class="social-button contact" id="contactBtn">
+				<i class="fas fa-comment-dots"></i>
+			</button>
+			
+			<!-- Contact Form Modal -->
+			<div id="contactModal" class="modal">
+				<div class="modal-content">
+					<span class="close">&times;</span>
+					<h2>Contact Me</h2>
+					<form>
+						<label for="name">Name</label>
+						<input type="text" id="name" required>
+						
+						<label for="email">Email</label>
+						<input type="email" id="email" required>
+						
+						<label for="message">Message</label>
+						<textarea id="message" rows="4" style="resize: none;" required></textarea>
+						
+						<button type="submit">Send</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="about-me">
+			<div class="about-image">
+				<img src="images/morgan-leason.png" alt="Headshot">
+			</div>
+			<div class="about-details">
+				<h1>Morgan Leason</h1>
+				<p>Election Security and Politics Reporter for Capital News Service; Editor-in-Chief of Stories Beneath the Shell; Journalism and Public Policy Student at University of Maryland</p>
+			</div>
+		</div>
+	</header>
+	
+	<!-- Portfolio Section with Filters and Search -->
+	<section id="portfolio" class="portfolio">
+		<!-- Filter & Search Bar -->
+		<div class="filter-search">
+			<div class="filters">
+				<select id="type-filter" class="type-filter">
+					<option value="all">All Types</option>
+					<option value="written">Written</option>
+					<option value="podcast">Podcast</option>
+					<option value="data">Data</option>
+				</select>
+				
+				
+				<select id="source-filter" class="source-filter">
+					<option value="all">All Sources</option>
+					<option value="Capital News Service">Capital News Service</option>
+					<option value="The Guardian">The Guardian</option>
+					<option value="Nature">Nature</option>
+					<!-- Add more sources as needed -->
+				</select>
+				
+			</div>
+			<input type="text" id="search-bar" placeholder="Search..." class="search-bar"/>
+		</div>
+		
+		<!-- Portfolio Cards -->
+		<div class="grid" id="portfolio-cards">
+			<!-- Sample Card -->
+			<a href="https://cnsmaryland.org/2025/02/28/state-officials-brace-for-big-layoffs-of-federal-workers/" class="card-link" target="_blank">
+				<div class="card" data-type="written" data-source="Capital News Service">
+					<div class="details">
+						<span>Written | Capital News Service</span>
+						<h3>State officials brace for big layoffs of federal workers</h3>
+						<p>As federal agencies prepare for budget and staff reductions, state leaders say they are mobilizing resources to mitigate impacts and support affected workers.</p>
+					</div>
+					<div class="image-container">
+						<img src="images/federal_layoffs.jpg" alt="Federal Layoffs">
+					</div>
+				</div>
+			</a>
+			
+			
+			<a href="https://cnsmaryland.org/2024/12/05/maryland-democrats-prepare-for-trump-2-0/" class="card-link" target="_blank">
+				<div class="card" data-type="written" data-source="Capital News Service">
+					<div class="details">
+						<span>Written | Capital News Service</span>
+						<h3>Maryland Democrats prepare for Trump 2.0</h3>
+						<p>Maryland Democratic leaders are projecting confidence about how the state will fare under Donald Trump, but are concerned about how quickly he might enact some of his policies.</p>
+					</div>
+					<div class="image-container">
+						<img src="images/maryland_trump.jpg" alt="Maryland Trump">
+					</div>
+				</div>
+			</a>
+			
+			
+			
+			
+			
+		</div>
+	</section>
+	
+	<footer>
+		<p>&copy; 2025 Morgan Leason | All rights reserved.</p>
+	</footer>
+	
+	<script src="script.js"></script>
+</body>
+</html>
+
