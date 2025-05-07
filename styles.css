@@ -217,7 +217,6 @@ a:hover {
     border: 0px;
     font-size: 1rem;
     margin-right: 1rem; /* Optional: Adds some space between the search bar and the filter buttons */
-    width: 30%;
     background-color: #f4f4f4;
 }
 
@@ -225,7 +224,7 @@ a:hover {
     display: flex; /* Use Flexbox to lay out items in a row */
     justify-content: space-between; /* Distribute space evenly between the elements */
     align-items: center; /* Vertically center the items */
-    gap: 1rem; /* Add some space between the input and buttons */
+    gap: 0.1rem; /* Add some space between the input and buttons */
     margin-bottom: 1.5rem; /* Optional: Adds some spacing below the filter/search bar */
 }
 
@@ -243,7 +242,7 @@ a:hover {
     font-size: 1rem;
     background-color: #ffffff;
     color: #5e2b5e;
-    margin: 15px;
+    margin: 5px;
 }
 
 /* Portfolio Grid */
@@ -337,6 +336,10 @@ a:hover {
 
 /* Responsive Layout for smaller screens */
 @media (max-width: 768px) {
+
+
+
+
     .card {
         grid-template-columns: 1fr; 
     }
@@ -471,6 +474,7 @@ footer {
     .filter-search {
         flex-direction: column;
         align-items: flex-start;
+        max-width: 90%;
     }
     
     .type-filter,
